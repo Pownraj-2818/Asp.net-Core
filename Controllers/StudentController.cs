@@ -57,6 +57,7 @@ namespace CodeFirst_MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Student student)
         {
+            Console.WriteLine("Hello");
             if (ModelState.IsValid)
             {
                 _context.Add(student);
